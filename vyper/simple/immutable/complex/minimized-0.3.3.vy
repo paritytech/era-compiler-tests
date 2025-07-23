@@ -1,31 +1,40 @@
-#! { "modes": [ "V =0.3.3" ], "cases": [ {
-#!     "name": "default",
-#!     "inputs": [
-#!         {
-#!             "method": "#deployer",
-#!             "caller": "0x0000000000000000000000000000000000000099",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "Test.address"
-#!             ]
-#!         },
-#!         {
-#!             "method": "x",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "42"
-#!             ]
-#!         },
-#!         {
-#!             "method": "y",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "43"
-#!             ]
-#!         }
-#!     ],
-#!     "expected": [ "43" ]
-#! } ] }
+#!{
+#!    "modes": [
+#!        "V =0.3.3"
+#!    ],
+#!    "cases": [
+#!        {
+#!            "name": "default",
+#!            "inputs": [
+#!                {
+#!                    "method": "#deployer",
+#!                    "caller": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "Test.address"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "x",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "42"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "y",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "43"
+#!                    ]
+#!                }
+#!            ],
+#!            "expected": [
+#!                "43"
+#!            ]
+#!        }
+#!    ]
+#!}
 
 # @version 0.3.3
 

@@ -1,56 +1,59 @@
-{ "modes": [ "V >=0.4.0" ], "cases": [ {
-    "name": "default",
-    "inputs": [
+{
+    "modes": [
+        "V >=0.4.0"
+    ],
+    "cases": [
         {
-            "instance": "Lib",
-            "method": "#deployer",
-            "caller": "0xdeadbeef00000000000000000000000000000011",
-            "calldata": [
-            ],
-            "expected": [
-                "Lib.address"
-            ]
-        },
-        {
-            "instance": "HackMe",
-            "method": "#deployer",
-            "caller": "0xdeadbeef00000000000000000000000000000011",
-            "calldata": [
-                "Lib.address"
-            ],
-            "expected": [
-                "HackMe.address"
-            ]
-        },
-        {
-            "instance": "Attack",
-            "method": "#deployer",
-            "caller": "0xdeadbeef00000000000000000000000000000012",
-            "calldata": [
-                "HackMe.address"
+            "name": "default",
+            "inputs": [
+                {
+                    "instance": "Lib",
+                    "method": "#deployer",
+                    "caller": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+                    "calldata": [],
+                    "expected": [
+                        "Lib.address"
+                    ]
+                },
+                {
+                    "instance": "HackMe",
+                    "method": "#deployer",
+                    "caller": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+                    "calldata": [
+                        "Lib.address"
+                    ],
+                    "expected": [
+                        "HackMe.address"
+                    ]
+                },
+                {
+                    "instance": "Attack",
+                    "method": "#deployer",
+                    "caller": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+                    "calldata": [
+                        "HackMe.address"
+                    ],
+                    "expected": [
+                        "Attack.address"
+                    ]
+                },
+                {
+                    "instance": "Attack",
+                    "caller": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+                    "method": "attack",
+                    "calldata": []
+                },
+                {
+                    "instance": "HackMe",
+                    "method": "owner",
+                    "calldata": []
+                }
             ],
             "expected": [
                 "Attack.address"
             ]
-        },
-        {
-            "instance": "Attack",
-            "caller": "0xdeadbeef00000000000000000000000000000012",
-            "method": "attack",
-            "calldata": [
-            ]
-        },
-        {
-            "instance": "HackMe",
-            "method": "owner",
-            "calldata": [
-            ]
         }
     ],
-    "expected": [
-        "Attack.address"
-    ]
-} ],
     "contracts": {
         "Lib": "lib.vy",
         "HackMe": "hack_me.vy",

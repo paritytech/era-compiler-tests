@@ -1,44 +1,49 @@
-//! { "cases": [ {
-//!     "name": "address",
-//!     "inputs": [
-//!         {
-//!             "method": "#deployer",
-//!             "calldata": [
-//!                 "9823"
-//!             ],
-//!             "expected": [
-//!                 "Test.address"
-//!             ]
-//!         }, {
-//!             "method": "MY_ADDRESS",
-//!             "calldata": [
-//!             ]
-//!         }
-//!     ],
-//!     "expected": [
-//!         "0xdeadbeef01000000000000000000000000000000"
-//!     ]
-//! }, {
-//!     "name": "uint",
-//!     "inputs": [
-//!         {
-//!             "method": "#deployer",
-//!             "calldata": [
-//!                 "555555"
-//!             ],
-//!             "expected": [
-//!                 "Test.address"
-//!             ]
-//!         }, {
-//!             "method": "MY_UINT",
-//!             "calldata": [
-//!             ]
-//!         }
-//!     ],
-//!     "expected": [
-//!         "555555"
-//!     ]
-//! } ] }
+//!{
+//!    "cases": [
+//!        {
+//!            "name": "address",
+//!            "inputs": [
+//!                {
+//!                    "method": "#deployer",
+//!                    "calldata": [
+//!                        "9823"
+//!                    ],
+//!                    "expected": [
+//!                        "Test.address"
+//!                    ]
+//!                },
+//!                {
+//!                    "method": "MY_ADDRESS",
+//!                    "calldata": []
+//!                }
+//!            ],
+//!            "expected": [
+//!                "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+//!            ]
+//!        },
+//!        {
+//!            "name": "uint",
+//!            "inputs": [
+//!                {
+//!                    "method": "#deployer",
+//!                    "calldata": [
+//!                        "555555"
+//!                    ],
+//!                    "expected": [
+//!                        "Test.address"
+//!                    ]
+//!                },
+//!                {
+//!                    "method": "MY_UINT",
+//!                    "calldata": []
+//!                }
+//!            ],
+//!            "expected": [
+//!                "555555"
+//!            ]
+//!        }
+//!    ]
+//!}
 
 // SPDX-License-Identifier: MIT
 

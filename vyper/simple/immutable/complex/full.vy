@@ -1,31 +1,40 @@
-#! { "modes": [ "V >=0.4.0" ], "cases": [ {
-#!     "name": "default",
-#!     "inputs": [
-#!         {
-#!             "method": "#deployer",
-#!             "caller": "0x0000000000000000000000000000000000000099",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "Test.address"
-#!             ]
-#!         },
-#!         {
-#!             "method": "DOMAIN_SEPARATOR_0",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6"
-#!             ]
-#!         },
-#!         {
-#!             "method": "DOMAIN_SEPARATOR_0A",
-#!             "calldata": [],
-#!             "expected": [
-#!                 "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6"
-#!             ]
-#!         }
-#!     ],
-#!     "expected": [ "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6" ]
-#! } ] }
+#!{
+#!    "modes": [
+#!        "V >=0.4.0"
+#!    ],
+#!    "cases": [
+#!        {
+#!            "name": "default",
+#!            "inputs": [
+#!                {
+#!                    "method": "#deployer",
+#!                    "caller": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "Test.address"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "DOMAIN_SEPARATOR_0",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "DOMAIN_SEPARATOR_0A",
+#!                    "calldata": [],
+#!                    "expected": [
+#!                        "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6"
+#!                    ]
+#!                }
+#!            ],
+#!            "expected": [
+#!                "0x19ed957342c0dd93f726a54a983583a4ccd3ae9b41e0f15c834de372bc5955b6"
+#!            ]
+#!        }
+#!    ]
+#!}
 
 EIP712_TYPEHASH: public(constant(bytes32)) = keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)")
 DOMAIN_SEPARATOR_0: public(immutable(bytes32))

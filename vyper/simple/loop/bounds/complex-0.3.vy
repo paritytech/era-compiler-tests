@@ -1,72 +1,79 @@
-#! { "modes": [ "V <=0.3.10" ], "cases": [ {
-#!     "name": "default",
-#!     "inputs": [
-#!         {
-#!             "method": "#deployer",
-#!             "calldata": [
-#!                 "0xdeadbeef01000000000000000000000000000000"
-#!             ],
-#!             "expected": [
-#!                 "Test.address"
-#!             ]
-#!         },
-#!         {
-#!             "method": "add_fees",
-#!             "calldata": [
-#!                 "1"
-#!             ],
-#!             "value": "1 wei",
-#!             "expected": []
-#!         },
-#!         {
-#!             "method": "add_fees",
-#!             "calldata": [
-#!                 "2"
-#!             ],
-#!             "value": "1 wei",
-#!             "expected": []
-#!         },
-#!         {
-#!             "method": "add_fees",
-#!             "calldata": [
-#!                 "3"
-#!             ],
-#!             "value": "1 wei",
-#!             "expected": []
-#!         },
-#!         {
-#!             "method": "add_fees",
-#!             "calldata": [
-#!                 "4"
-#!             ],
-#!             "value": "1 wei",
-#!             "expected": []
-#!         },
-#!         {
-#!             "method": "claim_fees",
-#!             "caller": "0xdeadbeef42000000000000000000000000000000",
-#!             "calldata": [
-#!                 "0"
-#!             ],
-#!             "expected": [
-#!                 "1"
-#!             ]
-#!         },
-#!         {
-#!             "method": "claim_fees",
-#!             "caller": "0xdeadbeef01000000000000000000000000000000",
-#!             "calldata": [
-#!                 "0"
-#!             ],
-#!             "expected": [
-#!                 "4"
-#!             ]
-#!         }
-#!     ],
-#!     "expected": [
-#!         "100"
-#!     ]
-#! } ] }
+#!{
+#!    "modes": [
+#!        "V <=0.3.10"
+#!    ],
+#!    "cases": [
+#!        {
+#!            "name": "default",
+#!            "inputs": [
+#!                {
+#!                    "method": "#deployer",
+#!                    "calldata": [
+#!                        "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+#!                    ],
+#!                    "expected": [
+#!                        "Test.address"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "add_fees",
+#!                    "calldata": [
+#!                        "1"
+#!                    ],
+#!                    "value": "1 wei",
+#!                    "expected": []
+#!                },
+#!                {
+#!                    "method": "add_fees",
+#!                    "calldata": [
+#!                        "2"
+#!                    ],
+#!                    "value": "1 wei",
+#!                    "expected": []
+#!                },
+#!                {
+#!                    "method": "add_fees",
+#!                    "calldata": [
+#!                        "3"
+#!                    ],
+#!                    "value": "1 wei",
+#!                    "expected": []
+#!                },
+#!                {
+#!                    "method": "add_fees",
+#!                    "calldata": [
+#!                        "4"
+#!                    ],
+#!                    "value": "1 wei",
+#!                    "expected": []
+#!                },
+#!                {
+#!                    "method": "claim_fees",
+#!                    "caller": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+#!                    "calldata": [
+#!                        "0"
+#!                    ],
+#!                    "expected": [
+#!                        "1"
+#!                    ]
+#!                },
+#!                {
+#!                    "method": "claim_fees",
+#!                    "caller": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+#!                    "calldata": [
+#!                        "0"
+#!                    ],
+#!                    "expected": [
+#!                        "4"
+#!                    ]
+#!                }
+#!            ],
+#!            "expected": [
+#!                "100"
+#!            ]
+#!        }
+#!    ]
+#!}
 
 fees: uint256[10]
 admin: address

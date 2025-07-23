@@ -1,30 +1,34 @@
-//! { "cases": [ {
-//!     "name": "without_argument",
-//!     "inputs": [
-//!         {
-//!             "method": "main()",
-//!             "caller": "0xdeadbeef00000000000000000000000000000042",
-//!             "calldata": [
-//!             ]
-//!         }
-//!     ],
-//!     "expected": [
-//!         "0xdeadbeef00000000000000000000000000000042"
-//!     ]
-//! }, {
-//!     "name": "with_argument",
-//!     "inputs": [
-//!         {
-//!             "method": "main(address)",
-//!             "calldata": [
-//!                 "0xdeadbeef00000000000000000000000000000042"
-//!             ]
-//!         }
-//!     ],
-//!     "expected": [
-//!         "0xdeadbeef00000000000000000000000000000042"
-//!     ]
-//! } ] }
+//!{
+//!    "cases": [
+//!        {
+//!            "name": "without_argument",
+//!            "inputs": [
+//!                {
+//!                    "method": "main()",
+//!                    "caller": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+//!                    "calldata": []
+//!                }
+//!            ],
+//!            "expected": [
+//!                "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf"
+//!            ]
+//!        },
+//!        {
+//!            "name": "with_argument",
+//!            "inputs": [
+//!                {
+//!                    "method": "main(address)",
+//!                    "calldata": [
+//!                        "0xdeadbeef00000000000000000000000000000042"
+//!                    ]
+//!                }
+//!            ],
+//!            "expected": [
+//!                "0xdeadbeef00000000000000000000000000000042"
+//!            ]
+//!        }
+//!    ]
+//!}
 
 // SPDX-License-Identifier: MIT
 
