@@ -132,7 +132,7 @@ def main() -> None:
             )
             lines_to_replace_with: str = "\n".join(
                 map(
-                    lambda line: f"{comment_sequence}{line}",
+                    lambda line: f"{comment_sequence}{' ' if comment_sequence else ''}{line}",
                     json.dumps(metadata, indent=4).split("\n"),
                 )
             )

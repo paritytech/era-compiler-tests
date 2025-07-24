@@ -1,23 +1,28 @@
-{ "cases": [ {
-    "name": "main",
-    "inputs": [
+{
+    "cases": [
         {
-            "instance": "Main",
-            "method": "main",
-            "calldata": [
-                "5"
+            "name": "main",
+            "inputs": [
+                {
+                    "instance": "Main",
+                    "method": "main",
+                    "calldata": [
+                        "5"
+                    ]
+                }
+            ],
+            "expected": [
+                "10"
             ]
         }
     ],
-    "expected": [
-        "10"
-    ]
-} ],
     "contracts": {
         "Main": "main.sol:Main",
         "Library": "library.sol:L"
     },
     "libraries": {
-        "library.sol": { "L": "Library" }
+        "library.sol": {
+            "L": "Library"
+        }
     }
 }

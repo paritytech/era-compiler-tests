@@ -1,32 +1,44 @@
-{ "modes": [ "Y", "E" ], "cases": [ {
-    "name": "default",
-    "inputs": [
+{
+    "modes": [
+        "Y",
+        "E"
+    ],
+    "cases": [
         {
-            "instance": "OtherContract",
-            "method": "#deployer",
-            "calldata": [],
-            "expected": [ "OtherContract.address" ]
-        },
-        {
-            "method": "#deployer",
-            "address": "Test.address",
-            "calldata": [
-                "OtherContract.address"
+            "name": "default",
+            "inputs": [
+                {
+                    "instance": "OtherContract",
+                    "method": "#deployer",
+                    "calldata": [],
+                    "expected": [
+                        "OtherContract.address"
+                    ]
+                },
+                {
+                    "method": "#deployer",
+                    "address": "Test.address",
+                    "calldata": [
+                        "OtherContract.address"
+                    ],
+                    "expected": [
+                        "Test.address"
+                    ]
+                },
+                {
+                    "method": "complexOperation",
+                    "calldata": [
+                        "5"
+                    ]
+                }
             ],
-            "expected": [ "Test.address" ]
-        },
-        {
-            "method": "complexOperation",
-            "calldata": [
-                "5"
+            "expected": [
+                "35"
             ]
         }
     ],
-    "expected": [
-        "35"
-    ]
-} ],
-"contracts": {
-    "OtherContract": "main.sol:OtherContract",
-    "Test": "main.sol:Test"
-} }
+    "contracts": {
+        "OtherContract": "main.sol:OtherContract",
+        "Test": "main.sol:Test"
+    }
+}
