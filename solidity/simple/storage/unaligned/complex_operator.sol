@@ -28,8 +28,8 @@ contract Test {
     }
 
     function setStorage() public {
-        field_1 = 2;
+        field_1 = 3;
         field_2 = 5;
-        field_3 = 3;
+        field_3 = 2;
     }
 }
