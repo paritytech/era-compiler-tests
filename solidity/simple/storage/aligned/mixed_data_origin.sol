@@ -1,14 +1,12 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "5", "7"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -41,5 +39,10 @@ contract Test {
 
     function inner(Data memory data, uint248 value, uint8 literal) public returns(uint248) {
         return ((uint248(a) + data.c + uint248(b) + data.d + value) * uint248(literal) * SOMETHING - SOMETHING_ELSE) / 1000;
+    }
+
+    function setStorage() public {
+        a = 5;
+        b = 7;
     }
 }

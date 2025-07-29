@@ -1,16 +1,14 @@
 //! { "cases": [ {
 //!     "name": "false_false",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "0",
 //!                 "0",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -19,16 +17,14 @@
 //! }, {
 //!     "name": "false_true",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "0",
 //!                 "1",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -37,16 +33,14 @@
 //! }, {
 //!     "name": "true_false",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "1",
 //!                 "0",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -55,16 +49,14 @@
 //! }, {
 //!     "name": "true_true",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "1",
 //!                 "1",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -87,5 +79,9 @@ contract Test {
         }
 
         return uint8(data);
+    }
+
+    function setStorage() public {
+        data = 42;
     }
 }
