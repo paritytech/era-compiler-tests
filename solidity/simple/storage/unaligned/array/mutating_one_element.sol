@@ -1,13 +1,11 @@
 //! { "cases": [ {
 //!     "name": "complex",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "complex",
 //!             "calldata": [
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "1"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -26,5 +24,9 @@ contract Test {
 
     function complex() public view returns(uint8) {
         return KEY[0];
+    }
+
+    function setStorage() public {
+        KEY[0] = 1;
     }
 }

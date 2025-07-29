@@ -1,14 +1,12 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "12"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "0x020503"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -27,5 +25,11 @@ contract Test {
 
     function main(uint8 witness) public returns(uint8) {
         return witness + field_1 * field_2 * field_3;
+    }
+
+    function setStorage() public {
+        field_1 = 2;
+        field_2 = 5;
+        field_3 = 3;
     }
 }

@@ -1,14 +1,12 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "0x656463"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -31,5 +29,11 @@ contract Test {
         data.next = argument;
 
         return argument + TEST + data.next;
+    }
+
+    function setStorage() public {
+        data.value = 99;
+        data.next = 100;
+        data.last = 101;
     }
 }

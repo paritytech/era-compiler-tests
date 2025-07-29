@@ -1,14 +1,12 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
+//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "20", "15", "10", "5"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -25,5 +23,12 @@ contract Test {
             product *= uint16(data[i]);
         }
         return product;
+    }
+
+    function setStorage() public {
+        data[0] = 20;
+        data[1] = 15;
+        data[2] = 10;
+        data[3] = 5;
     }
 }
