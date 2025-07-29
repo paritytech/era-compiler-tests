@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -35,7 +34,7 @@ contract Test {
         return sum;
     }
 
-    function setStorage() public {
+    constructor() {
         data.a = 5;
         data.b = 10;
         data.c = 15;

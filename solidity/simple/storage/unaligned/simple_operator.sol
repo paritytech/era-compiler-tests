@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -27,7 +26,7 @@ contract Test {
         return witness + field_1 * field_2 * field_3;
     }
 
-    function setStorage() public {
+    constructor() {
         field_1 = 2;
         field_2 = 5;
         field_3 = 3;

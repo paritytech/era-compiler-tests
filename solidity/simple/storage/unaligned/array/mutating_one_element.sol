@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "complex",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "complex",
 //!             "calldata": [
@@ -26,7 +25,7 @@ contract Test {
         return KEY[0];
     }
 
-    function setStorage() public {
+    constructor() {
         KEY[0] = 1;
     }
 }

@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -33,7 +32,7 @@ contract Test {
         return product;
     }
 
-    function setStorage() public {
+    constructor() {
         data.a = 5;
         data.b = 10;
         data.c = 15;

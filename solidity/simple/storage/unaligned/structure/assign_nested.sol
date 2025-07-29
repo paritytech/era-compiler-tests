@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -35,7 +34,7 @@ contract Test {
         return argument + TEST + data.inner.next;
     }
 
-    function setStorage() public {
+    constructor() {
         data.inner.value = 99;
         data.inner.next = 100;
         data.inner.last = 101;

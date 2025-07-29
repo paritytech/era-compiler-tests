@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -25,7 +24,7 @@ contract Test {
         return argument + TEST + uint8(data[3]);
     }
 
-    function setStorage() public {
+    constructor() {
         data[0] = 1;
         data[1] = 2;
         data[2] = 3;

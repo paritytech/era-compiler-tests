@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "false_false",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -17,7 +16,6 @@
 //! }, {
 //!     "name": "false_true",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -33,7 +31,6 @@
 //! }, {
 //!     "name": "true_false",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -49,7 +46,6 @@
 //! }, {
 //!     "name": "true_true",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -81,7 +77,7 @@ contract Test {
         return uint8(data);
     }
 
-    function setStorage() public {
+    constructor() {
         data = 42;
     }
 }

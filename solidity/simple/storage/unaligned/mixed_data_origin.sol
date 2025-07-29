@@ -1,7 +1,6 @@
 //! { "cases": [ {
 //!     "name": "main",
 //!     "inputs": [
-//!         { "method": "setStorage" },
 //!         {
 //!             "method": "main",
 //!             "calldata": [
@@ -41,7 +40,7 @@ contract Test {
         return ((a + data.c + b + data.d + value) * uint248(literal) * SOMETHING - SOMETHING_ELSE) / 1000;
     }
 
-    function setStorage() public {
+    constructor() {
         a = 5;
         b = 7;
     }
