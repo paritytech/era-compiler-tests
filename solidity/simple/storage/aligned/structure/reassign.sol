@@ -2,13 +2,19 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "99", 
+//!                 "100", 
+//!                 "101"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "99", "100", "101"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -26,6 +32,12 @@ contract Test {
     }
 
     Data data;
+
+    constructor(uint256 value, uint256 next, uint256 last) {
+        data.value = value;
+        data.next = next;
+        data.last = last;
+    }
 
     function main(uint8 argument) public returns(uint8) {
         data.next += uint256(argument);

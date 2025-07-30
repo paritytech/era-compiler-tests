@@ -2,13 +2,18 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "5", 
+//!                 "7"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "5", "7"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -32,6 +37,11 @@ contract Test {
 
     uint256 a;
     uint256 b;
+
+    constructor(uint256 _a, uint256 _b) {
+        a = _a;
+        b = _b;
+    }
 
     function main(uint248 value) public returns(uint248) {
         Data memory data = Data(10, 20);
