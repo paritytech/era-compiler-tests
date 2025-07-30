@@ -8,7 +8,7 @@
 //!         }
 //!     ],
 //!     "expected": [
-//!         "0x0000000000000000000000009292929292929292929292929292929292929292"
+//!         "0x00000000000000000000000090F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
 //!     ]
 //! } ] }
 
@@ -17,7 +17,7 @@
 pragma solidity >=0.4.16;
 
 contract Test {
-    function main() external view returns(uint256 result) {
+    function main() external view returns (uint256 result) {
         assembly {
             result := origin()
         }

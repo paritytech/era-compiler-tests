@@ -1,15 +1,28 @@
-{ "targets": [ "evm" ], "modes": [ "Mz" ], "cases": [ {
-    "name": "default",
-    "inputs": [],
-    "expected": []
-} ],
+{
+    "targets": [
+        "evm"
+    ],
+    "modes": [
+        "Mz"
+    ],
+    "cases": [
+        {
+            "name": "default",
+            "inputs": [],
+            "expected": []
+        }
+    ],
     "contracts": {
         "LandSvgLib": "main.sol:LandSvgLib",
         "Base64": "base64.sol:Base64",
         "PRBMath": "PRBMath.sol:PRBMath"
     },
     "libraries": {
-        "base64.sol": { "Base64": "Base64" },
-        "PRBMath.sol": { "PRBMath": "PRBMath" }
+        "base64.sol": {
+            "Base64": "Base64"
+        },
+        "PRBMath.sol": {
+            "PRBMath": "PRBMath"
+        }
     }
 }
