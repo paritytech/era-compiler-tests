@@ -3,7 +3,7 @@
         "evm"
     ],
     "modes": [
-        "Y"
+        "Y+ =0.7.6"
     ],
     "cases": [
         {
@@ -20,7 +20,7 @@
                         "0"
                     ],
                     "expected": [
-                        "0x3a9fc460c833f26413e25ceb8105cd04c5aaee6c"
+                        "Token1.address"
                     ]
                 },
                 {
@@ -34,7 +34,7 @@
                         "0"
                     ],
                     "expected": [
-                        "0xa7d88645ce7c923297a3edd0f59bdda46657bd0a"
+                        "Token2.address"
                     ]
                 },
                 {
@@ -140,9 +140,14 @@
                         "Token2.address",
                         "3000"
                     ],
+                    "variable_assignments": {
+                        "return_data": [
+                            "UniswapV3PoolAddress"
+                        ]
+                    },
                     "expected": {
                         "return_data": [
-                            "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f"
+                            "$VARIABLE:UniswapV3PoolAddress"
                         ],
                         "exception": false,
                         "events": [
@@ -156,7 +161,7 @@
                                 ],
                                 "values": [
                                     "60",
-                                    "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f"
+                                    "$VARIABLE:UniswapV3PoolAddress"
                                 ]
                             }
                         ]
@@ -166,7 +171,7 @@
                     "instance": "_InitWrapper",
                     "method": "initialize",
                     "calldata": [
-                        "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f",
+                        "$VARIABLE:UniswapV3PoolAddress",
                         "0x00000000000000000000000000000000003acb29cd50f2a2f7b103ddae851344"
                     ],
                     "expected": {
@@ -174,7 +179,7 @@
                         "exception": false,
                         "events": [
                             {
-                                "address": "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f",
+                                "address": "$VARIABLE:UniswapV3PoolAddress",
                                 "topics": [
                                     "0x98636036cb66a9c19a37435efc1e90142190214e8abeb821bdba3f2990dd4c95"
                                 ],
@@ -270,7 +275,7 @@
                                 "topics": [
                                     "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
                                     "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
-                                    "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f"
+                                    "$VARIABLE:UniswapV3PoolAddress"
                                 ],
                                 "values": [
                                     "99999999999999999998943496"
@@ -288,7 +293,7 @@
                                 ]
                             },
                             {
-                                "address": "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f",
+                                "address": "$VARIABLE:UniswapV3PoolAddress",
                                 "topics": [
                                     "0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde",
                                     "NonfungiblePositionManager.address",
@@ -393,8 +398,8 @@
                         "157064251",
                         "1556399762425946795663",
                         "43",
-                        "0x3a9fc460c833f26413e25ceb8105cd04c5aaee6c000bb8a7d88645ce7c923297",
-                        "0xa3edd0f59bdda46657bd0a000000000000000000000000000000000000000000"
+                        "Token1.address 96 << 3000 72 << + Token2.address 88 >> +",
+                        "Token2.address 168 <<"
                     ],
                     "expected": {
                         "return_data": [
@@ -406,7 +411,7 @@
                                 "address": "Token2.address",
                                 "topics": [
                                     "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
-                                    "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f",
+                                    "$VARIABLE:UniswapV3PoolAddress",
                                     "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF"
                                 ],
                                 "values": [
@@ -418,7 +423,7 @@
                                 "topics": [
                                     "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
                                     "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
-                                    "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f"
+                                    "$VARIABLE:UniswapV3PoolAddress"
                                 ],
                                 "values": [
                                     "157064251"
@@ -436,7 +441,7 @@
                                 ]
                             },
                             {
-                                "address": "0x911021afcc4ed882dcbcb76bbd00fcb8d061e12f",
+                                "address": "$VARIABLE:UniswapV3PoolAddress",
                                 "topics": [
                                     "0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67",
                                     "SwapRouter.address",
@@ -453,9 +458,6 @@
                         ]
                     }
                 }
-            ],
-            "expected": [
-                "*"
             ]
         }
     ],
