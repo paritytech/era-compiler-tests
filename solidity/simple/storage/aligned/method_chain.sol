@@ -5,7 +5,10 @@
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "5", "11"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -35,10 +38,5 @@ contract Test {
 
     function quadruple(uint248 value) public returns(uint248) {
         return value * 4;
-    }
-
-    constructor() {
-        a = 5;
-        b = 11;
     }
 }

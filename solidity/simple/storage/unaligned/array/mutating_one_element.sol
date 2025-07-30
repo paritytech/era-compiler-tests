@@ -4,7 +4,10 @@
 //!         {
 //!             "method": "complex",
 //!             "calldata": [
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "1"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -23,9 +26,5 @@ contract Test {
 
     function complex() public view returns(uint8) {
         return KEY[0];
-    }
-
-    constructor() {
-        KEY[0] = 1;
     }
 }

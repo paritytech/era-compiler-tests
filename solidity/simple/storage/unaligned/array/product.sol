@@ -5,7 +5,10 @@
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "0x0005000a000f0014"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -22,12 +25,5 @@ contract Test {
             product *= data[i];
         }
         return product;
-    }
-
-    constructor() {
-        data[0] = 5;
-        data[1] = 10;
-        data[2] = 15;
-        data[3] = 20;
     }
 }

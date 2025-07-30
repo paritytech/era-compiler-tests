@@ -5,7 +5,10 @@
 //!             "method": "main",
 //!             "calldata": [
 //!                 "12"
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "3", "5", "2"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -24,11 +27,5 @@ contract Test {
 
     function main(uint8 witness) public returns(uint8) {
         return witness + uint8(field_1) * uint8(field_2) * uint8(field_3);
-    }
-
-    constructor() {
-        field_1 = 3;
-        field_2 = 5;
-        field_3 = 2;
     }
 }

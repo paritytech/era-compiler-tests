@@ -5,7 +5,10 @@
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "99", "100", "101"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -32,11 +35,5 @@ contract Test {
         data.inner.next = uint256(argument);
 
         return argument + TEST + uint8(data.inner.next);
-    }
-
-    constructor() {
-        data.inner.value = 99;
-        data.inner.next = 100;
-        data.inner.last = 101;
     }
 }

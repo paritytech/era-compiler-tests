@@ -5,7 +5,10 @@
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ]
+//!             ],
+//!             "storage": { "Test.address": [
+//!                 "20", "15", "10", "5"
+//!             ] }
 //!         }
 //!     ],
 //!     "expected": [
@@ -22,12 +25,5 @@ contract Test {
             sum += uint8(data[i]);
         }
         return sum;
-    }
-
-    constructor() {
-        data[0] = 20;
-        data[1] = 15;
-        data[2] = 10;
-        data[3] = 5;
     }
 }
