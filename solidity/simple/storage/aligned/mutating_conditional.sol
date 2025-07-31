@@ -2,15 +2,19 @@
 //!     "name": "false_false",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "42"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "0",
 //!                 "0",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -20,15 +24,19 @@
 //!     "name": "false_true",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "42"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "0",
 //!                 "1",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -38,15 +46,19 @@
 //!     "name": "true_false",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "42"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "1",
 //!                 "0",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -56,15 +68,19 @@
 //!     "name": "true_true",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "42"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "1",
 //!                 "1",
 //!                 "25"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "42"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -78,6 +94,10 @@ pragma solidity >=0.4.16;
 
 contract Test {
     uint256 data;
+
+    constructor(uint256 initialData) {
+        data = initialData;
+    }
 
     function main(bool gate_1, bool gate_2, uint8 value) public returns(uint8) {
         if (gate_1) {

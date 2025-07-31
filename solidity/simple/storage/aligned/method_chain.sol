@@ -2,13 +2,18 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "#deployer",
+//!             "instance": "Test",
+//!             "calldata": [
+//!                 "5", 
+//!                 "11"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "5", "11"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -23,6 +28,11 @@ pragma solidity >=0.4.16;
 contract Test {
     uint256 a;
     uint256 b;
+
+    constructor(uint256 _a, uint256 _b) {
+        a = _a;
+        b = _b;
+    }
 
     function main(uint248 value) public returns(uint248) {
         return uint248(a) + quadruple(triple(double(value))) + uint248(b);
