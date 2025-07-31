@@ -4,14 +4,7 @@
 //!         {
 //!             "method": "setStorage",
 //!             "calldata": [
-//!                 "0",
-//!                 "5"
-//!             ]
-//!         },
-//!         {
-//!             "method": "setStorage",
-//!             "calldata": [
-//!                 "1",
+//!                 "5",
 //!                 "11"
 //!             ]
 //!         },
@@ -35,9 +28,10 @@ contract Test {
     uint248 a;
     uint248 b;
 
-    function setStorage(uint256 idx, uint256 newStorage) public {
+    function setStorage(uint256 a, uint256 b) public {
         assembly {
-            sstore(idx, newStorage)
+            sstore(0, a)
+            sstore(1, b)
         }
     }
 
