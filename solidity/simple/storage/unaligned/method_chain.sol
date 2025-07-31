@@ -2,13 +2,24 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "setStorage",
+//!             "calldata": [
+//!                 "0",
+//!                 "5"
+//!             ]
+//!         },
+//!         {
+//!             "method": "setStorage",
+//!             "calldata": [
+//!                 "1",
+//!                 "11"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "5", "11"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -23,6 +34,12 @@ pragma solidity >=0.4.16;
 contract Test {
     uint248 a;
     uint248 b;
+
+    function setStorage(uint256 idx, uint256 newStorage) public {
+        assembly {
+            sstore(idx, newStorage)
+        }
+    }
 
     function main(uint248 value) public returns(uint248) {
         return a + quadruple(triple(double(value))) + b;
