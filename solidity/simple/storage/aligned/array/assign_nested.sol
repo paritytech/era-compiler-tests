@@ -2,8 +2,44 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
-//!             "method": "#deployer",
-//!             "instance": "Test"
+//!             "method": "setRow",
+//!             "calldata": [
+//!                 "0",
+//!                 "1",
+//!                 "2",
+//!                 "3",
+//!                 "4"
+//!             ]
+//!         },
+//!         {
+//!             "method": "setRow",
+//!             "calldata": [
+//!                 "1",
+//!                 "5",
+//!                 "6",
+//!                 "7",
+//!                 "8"
+//!             ]
+//!         },
+//!         {
+//!             "method": "setRow",
+//!             "calldata": [
+//!                 "2",
+//!                 "9",
+//!                 "10",
+//!                 "11",
+//!                 "12"
+//!             ]
+//!         },
+//!         {
+//!             "method": "setRow",
+//!             "calldata": [
+//!                 "3",
+//!                 "13",
+//!                 "14",
+//!                 "15",
+//!                 "16"
+//!             ]
 //!         },
 //!         {
 //!             "method": "main",
@@ -22,11 +58,11 @@ contract Test {
 
     uint8 constant TEST = 42;
 
-    constructor() {
-        data[0][0] = 1;  data[0][1] = 2;  data[0][2] = 3;  data[0][3] = 4;
-        data[1][0] = 5;  data[1][1] = 6;  data[1][2] = 7;  data[1][3] = 8;
-        data[2][0] = 9;  data[2][1] = 10; data[2][2] = 11; data[2][3] = 12;
-        data[3][0] = 13; data[3][1] = 14; data[3][2] = 15; data[3][3] = 16;
+    function setRow(uint row, uint256[4] calldata values) public {
+        data[row][0] = values[0];
+        data[row][1] = values[1];
+        data[row][2] = values[2];
+        data[row][3] = values[3];
     }
 
     function main(uint8 argument) public returns(uint8) {
