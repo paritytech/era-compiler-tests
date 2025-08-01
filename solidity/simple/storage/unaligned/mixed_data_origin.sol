@@ -2,13 +2,17 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "setStorage",
+//!             "calldata": [
+//!                 "5",
+//!                 "7"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "5", "7"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -32,6 +36,13 @@ contract Test {
 
     uint248 a;
     uint248 b;
+
+    function setStorage(uint256 a, uint256 b) public {
+        assembly {
+            sstore(0, a)
+            sstore(1, b)
+        }
+    }
 
     function main(uint248 value) public returns(uint248) {
         Data memory data = Data(10, 20);

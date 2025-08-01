@@ -2,13 +2,16 @@
 //!     "name": "main",
 //!     "inputs": [
 //!         {
+//!             "method": "setStorage",
+//!             "calldata": [
+//!                 "0x00000000000000000000000000000000000000000000000000000000050a0f14"
+//!             ]
+//!         },
+//!         {
 //!             "method": "main",
 //!             "calldata": [
 //!                 "42"
-//!             ],
-//!             "storage": { "Test.address": [
-//!                 "0x050a0f14"
-//!             ] }
+//!             ]
 //!         }
 //!     ],
 //!     "expected": [
@@ -27,6 +30,12 @@ contract Test {
     }
 
     Data data;
+
+    function setStorage(bytes32 newStorage) public {
+        assembly {
+            sstore(0, newStorage)
+        }
+    }
 
     function main(uint8 argument) public returns(uint8) {
         uint8 sum = 0;
